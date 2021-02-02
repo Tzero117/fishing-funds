@@ -39,14 +39,14 @@ export const FromDayFund: (
       ?.split(',') || [''];
     const [
       jzrq,
-      dwjz,
+      zxjz, // 最新净值
       ljjz,
       sjbjz,
       sjzzl,
       gsbjl,
       gsbjz,
-      gszzl,
       gsz,
+      dwjz,
       gzrq,
       gztime
     ] = body.split('|');
