@@ -19,8 +19,6 @@ export const defalutSystemSetting: System.Setting = {
   autoCheckUpdateSetting: true,
 };
 
-const { app } = window.contextModules.electron;
-
 export function getSystemSetting() {
   const systemSetting: System.Setting = Utils.GetStorage(
     CONST.STORAGE.SYSTEM_SETTING,
@@ -35,10 +33,6 @@ export function setSystemSetting(setting: System.Setting) {
     ...systemSetting,
     ...setting,
   });
-  app.setLoginItemSettings({
-    openAtLogin: setting.autoStartSetting,
-  });
-  Utils.UpdateSystemTheme(setting.systemThemeSetting);
   return asyncSetting();
 }
 

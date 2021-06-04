@@ -10,13 +10,12 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-
   box-sizing: border-box;
   cursor: pointer;
-  border: 1px dashed var(--border-color);
+  border-radius: var(--base-radius);
 
   svg {
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
 
   &:hover {
@@ -24,9 +23,10 @@
       transform: scale(1.2);
     }
   }
-
 }
 
 .selected {
-  background-color: var(--inner-color);
+  svg {
+    transform: scale(1.2);
+  }
 }

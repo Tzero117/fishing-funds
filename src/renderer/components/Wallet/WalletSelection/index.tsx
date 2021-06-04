@@ -12,21 +12,26 @@ const size = {
   height: 24,
 };
 
-export interface WalletCarouselProps {
+export interface WalletSelectionProps {
   index: number;
   onChange?: (index: number) => void;
 }
 
-export const WalletCarousel: React.FC<WalletCarouselProps> = (props) => {
+export const WalletSelection: React.FC<WalletSelectionProps> = (props) => {
   const { index: walletIndex } = props;
   return (
     <div className={styles.content}>
       {wallets.map((Icon, index) => (
         <div
           key={index}
-          className={classnames(styles.wallet, {
-            [styles.selected]: index === walletIndex,
-          })}
+          className={classnames(
+            styles.wallet,
+            {
+              [styles.selected]: index === walletIndex,
+              selected: index === walletIndex,
+            },
+            'hoverable'
+          )}
           onClick={() => props.onChange && props.onChange(index)}
         >
           <Icon {...size} />
@@ -35,4 +40,4 @@ export const WalletCarousel: React.FC<WalletCarouselProps> = (props) => {
     </div>
   );
 };
-export default WalletCarousel;
+export default WalletSelection;

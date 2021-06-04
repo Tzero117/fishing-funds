@@ -1,23 +1,15 @@
 .content {
-  // padding: 10px 15px;
+  padding: var(--base-padding);
   position: relative;
 }
 
 .row {
-  padding: 15px;
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--background-color);
-  border-radius: 5px;
+  padding: var(--base-padding);
   box-sizing: border-box;
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  transition: background .3s;
-
-  &:hover {
-    background-color: var(--inner-color);
-  }
 
   svg {
     fill: var(--svg-icon-color);
@@ -30,4 +22,31 @@
 
 .dragItem {
   background-color: var(--inner-color) !important;
+}
+.markets {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.market {
+  flex: 1;
+  padding: var(--base-padding);
+  box-sizing: border-box;
+  margin-bottom: 10px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:nth-child(odd) {
+    margin-right: 10px;
+  }
+
+  svg {
+    cursor: pointer;
+    fill: var(--svg-icon-color);
+  }
+}
+.disappear {
+  display: none;
 }

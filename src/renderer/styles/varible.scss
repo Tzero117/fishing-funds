@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: light) {
   body {
     --background-color: #fff;
-    --inner-color: #efefef;
+    --inner-color: #f8f9fa;
     --inner-text-color: #888;
     --primary-color: #1890ff;
     --primary-text-color: #eee;
@@ -14,13 +14,14 @@
     --warn-color: #faad14;
     --main-text-color: #333;
     --secondary-main-text-color: #888;
-    --reverse-text-color: #454545;
-    --border-color: #eee;
+    --reverse-text-color: #808080;
+    --border-color: #f3f4f5;
     --alipay-color: #156dff;
     --wechat-color: #1fa131;
     --svg-icon-color: #333;
     --blur-color: rgba(255, 255, 255, 0.5);
     --hover-color: #e6f7ff;
+    --selected-color: #bae7ff;
     --tag-text-color: #fff;
 
     &.lowKey {
@@ -53,13 +54,14 @@
     --warn-color: #d89614;
     --main-text-color: #eee;
     --secondary-main-text-color: #888;
-    --reverse-text-color: #ccc;
-    --border-color: #111;
+    --reverse-text-color: #8f8f8f;
+    --border-color: #181818;
     --alipay-color: #156dff;
     --wechat-color: #1fa131;
     --svg-icon-color: #ccc;
     --blur-color: rgba(33, 33, 33, 0.3);
     --hover-color: #111d2c;
+    --selected-color: #112a45;
     --tag-text-color: #eee;
 
     &.lowKey {
@@ -91,4 +93,6 @@ body {
 
 body {
   --base-font-size: 12;
+  --base-padding: 10px;
+  --base-radius: 10px;
 }

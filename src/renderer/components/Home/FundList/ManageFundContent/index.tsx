@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ReactSortable } from 'react-sortablejs';
+import classnames from 'classnames';
 
+import PureCard from '@/components/Card/PureCard';
 import { ReactComponent as AddIcon } from '@/assets/icons/add.svg';
 import { ReactComponent as MenuIcon } from '@/assets/icons/menu.svg';
 import { ReactComponent as RemoveIcon } from '@/assets/icons/remove.svg';
@@ -100,7 +102,10 @@ const ManageFundContent: React.FC<ManageFundContentProps> = (props) => {
             >
               {sortFundConfig.map((fund) => {
                 return (
-                  <div key={fund.code} className={styles.row}>
+                  <PureCard
+                    key={fund.code}
+                    className={classnames(styles.row, 'hoverable')}
+                  >
                     <RemoveIcon
                       className={styles.remove}
                       onClick={(e) => {
@@ -130,7 +135,7 @@ const ManageFundContent: React.FC<ManageFundContentProps> = (props) => {
                       </div>
                     </div>
                     <MenuIcon className={styles.menu} />
-                  </div>
+                  </PureCard>
                 );
               })}
             </ReactSortable>
